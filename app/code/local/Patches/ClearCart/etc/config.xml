@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Patches_ClearCart>
+            <version>0.1.0</version>
+        </Patches_ClearCart>
+    </modules>
+    <global>
+        <models>
+          <clearcart>
+            <class>Patches_ClearCart_Model</class>
+          </clearcart>
+        </models>
+        <events>
+          <checkout_onepage_controller_success_action>
+            <observers>
+              <clear_cart_patch>
+                <type>singleton</type>
+                <class>clearcart/observer_cart</class>
+                <method>clearCart</method>
+              </clear_cart_patch>
+            </observers>
+          </checkout_onepage_controller_success_action>
+        </events>
+    </global>
+</config>

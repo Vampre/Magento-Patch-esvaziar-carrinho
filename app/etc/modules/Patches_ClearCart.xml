@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Patches_ClearCart>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Patches_ClearCart>
+    </modules>
+</config> 
+
